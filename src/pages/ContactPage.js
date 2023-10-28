@@ -4,6 +4,7 @@ import ContactForm from '../components/ContactForm';
 
 
 const ContactPage = () => {
+  
   return (
     <Container>
       <SubHeader current='Contact Us' detail={true} />
