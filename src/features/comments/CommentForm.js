@@ -8,7 +8,7 @@ import { validateCommentForm } from '../../utils/validateCommentForm';
 const CommentForm = ( {campsiteId} ) => {
   const [modalOpen, setModalOpen] = useState(false);
   const dispatch = useDispatch();
-  const handleSubmit = (values) => {
+  const handleLogin = (values) => {
     const comment = {
       campsiteId: parseInt(campsiteId),
       rating: values.rating,
@@ -33,7 +33,7 @@ const CommentForm = ( {campsiteId} ) => {
           rating: undefined,
           author:'',
           commentText:''}} 
-          onSubmit={handleSubmit} 
+          onSubmit={handleLogin} 
           validate={validateCommentForm}
         >
           <Form>
