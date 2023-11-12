@@ -1,4 +1,4 @@
-import { addComment } from './commentsSlice';
+import { postComment } from './commentsSlice';
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
 import { FormGroup, Label, Button, Modal, ModalHeader, ModalBody } from 'reactstrap';
@@ -17,7 +17,7 @@ const CommentForm = ( {campsiteId} ) => {
       date: new Date(Date.now()).toISOString()
   };
     console.log(comment);
-    dispatch(addComment(comment));
+    dispatch(postComment(comment));
     setModalOpen(false);
   };
 
